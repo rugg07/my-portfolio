@@ -1,0 +1,37 @@
+/*Underline transition while hovering*/
+.demo{
+    display: inline-block;
+    position: relative;
+  color: purple;
+  font-size: 18px;
+  padding-top: 5px;
+  text-align: center;
+  }
+  
+  .demo:hover{
+    background-color: lightpink;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  
+  .demo:hover::after{
+    transform: scaleX(1);
+  transform-origin: bottom left;
+    
+  }
+  
+  
+  .demo::after{
+  content: '';
+  position: absolute;
+  width: 100%; /*Check why 90% only and not 100%*/
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0; /*when position is absolute or fixed we use top, bottom, left, right to pad*/
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  }
