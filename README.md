@@ -1,3 +1,3 @@
 # my-portfolio
 
-Built using HTML, CSS, SCSS, Javascript.
+Built using HTML, CSS.
